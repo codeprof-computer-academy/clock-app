@@ -131,6 +131,15 @@
         
       }
 
+      .clock h3{
+        position: absolute;
+        top:60%;
+        left:50%;
+        transform : translateX(-50%);
+        font-size: 12px;
+      
+      }
+
        .hand{
           width: 50%;
           height: 5px;
