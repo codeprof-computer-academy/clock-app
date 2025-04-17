@@ -138,6 +138,18 @@
           
       }
 
+      .small-digital{
+        position: absolute;
+        top:40%;
+        left:50%;
+        transform: translateX(-50%);
+        background-color: white;
+        padding: 3px 15px;
+        border-radius: 10px;
+        font-weight: bold;
+
+      }
+
       .clock h3{
         position: absolute;
         top:60%;

@@ -72,6 +72,7 @@ function displayDigital(){
 
         //  set the period
           document.querySelector(".period").innerHTML = period
+          document.querySelector(".d-period").innerHTML = period
 
         //  convert to 12 hour time
          if(hrs > 12){
@@ -80,20 +81,26 @@ function displayDigital(){
          
          if(hrs < 10){
                 document.querySelector(".hrs").innerHTML = "0" + hrs
+                document.querySelector(".d-hr").innerHTML = "0" + hrs
          }else{
                 document.querySelector(".hrs").innerHTML = hrs
+                document.querySelector(".d-hr").innerHTML =  hrs
          }
          
         if(mins < 10){
                   document.querySelector(".mins").innerHTML = "0" + mins
+                  document.querySelector(".d-min").innerHTML = "0" + mins
         }else{
              document.querySelector(".mins").innerHTML =  mins
+             document.querySelector(".d-min").innerHTML =  mins
         }
         
         if(secs < 10){
                  document.querySelector(".secs").innerHTML = "0" + secs
+                 document.querySelector(".d-sec").innerHTML = "0" + secs
         }else{
                  document.querySelector(".secs").innerHTML = secs
+                  document.querySelector(".d-sec").innerHTML = secs
         }
 
 }
