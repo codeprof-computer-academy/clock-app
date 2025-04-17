@@ -64,7 +64,7 @@
     }
 
     .alarm-display{
-      display: flex;
+      display: none;
       gap:10px;
       justify-content: center;
       align-items: center;
