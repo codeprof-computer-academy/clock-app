@@ -207,6 +207,7 @@ dismiss_btn.addEventListener("click", function(){
         sound.src = ""
         clearInterval(alarm_interval)
         dismiss_btn.style.left = "-150px"
+         document.querySelector(".alarm-display").style.display = "none"
 })
 
 // logic to start watch
