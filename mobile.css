@@ -123,7 +123,7 @@
         display:flex;
         justify-content: center;
         align-items: center;
-        position: relative;
+    
       }
 
       .clock{
@@ -133,9 +133,9 @@
            background-position: center center;
            background-size: 100%;
            background-repeat: no-repeat;
-           transform: translateY(-3px);
            position: relative;
-        
+         
+          
       }
 
       .clock h3{
@@ -152,19 +152,29 @@
           height: 5px;
           background: black;
           position: absolute;
-          top: 50%;
+          top:50%;
           transform-origin: 100%;
           transform: rotate(90deg);
           transition: 0.05s;
+        
      
       }
 
     
      .sec-hand{
-     
+        
         background-color: red;
         z-index: 100;
      }
+
+     .hr-hand{
+        
+          width: 30%;
+          left: 20%;
+          height: 6px;
+          background-color:darkorange;
+     }
+
        
       .digital{
         display: none;
