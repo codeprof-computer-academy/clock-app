@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock App</title>
+    <link rel="shortcut icon" href="clock.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+
+    <header>
+             <span>
+                     <img src="clock.png" alt="" width="50">
+                    
+             </span>
+
+             <small class="alarm-display"> 
+                <label><img src="alarm.png" alt="" width="20"></label>
+                <b class="alarm-hr">00</b>: <b class="alarm-min">00</b> 
+            </small>
+
+             <button class="menu-btn">show time in <img src="down_arrow.png" alt="" width="20"> </button>
+              
+             <ul>
+                  <li class="select-analog">Analog Time</li>
+                  <li class="select-digital">Digital Time</li>
+                  <li class="select-stop-watch">Stop Watch</li>
+                  <li class="select-alarm">Set Alarm</li>
+             </ul>
+    </header>
+    <main>
+        <button class="dismiss-btn"> <img src="dismiss.png" alt="" width="20"> dismiss alarm</button>
+        <section class="analog">
+                <div class="clock">
+                                 <div class="hand sec-hand"></div>
+                                 <div class="hand min-hand"></div>
+                                 <div class="hand hr-hand"></div>
+                </div>
+               
+        </section>
+        <section class="digital">
+                  <span class="hrs">00</span>
+                  <span class="mins">00</span>
+                  <span class="secs">00</span>
+                <h1 class="period"></h1>
+
+        </section>
+
+        <form class="alarm">
+                      <div>
+                              <input type="number" placeholder="hr" max="24" min="1" class="user-hr"> : <input type="number" placeholder="mins" max="59" class="user-min">
+                      </div>
+                      <label>
+                             select sound
+                             <select class="user-sound">
+                                     <option value="">--</option>
+                                     <option value="alarm1.mp3">Sound1</option>
+                                     <option value="alarm2.mp3"> Sound 2</option>
+                                     <option value="alarm3.mp3"> Sound 3</option>
+                                     <option value="alarm4.mp3">Sound 4</option>
+                             </select>
+                      </label>
+
+                       <!-- sound that will play -->
+                      <audio src="" class="sound" loop></audio>
+                      <button>Set alarm</button>
+                    </form>
+
+        <section class="alarm-success">
+                <h1>Alarm Set successfully!</h1>
+                <button class="success-close">Close</button>
+        </section>
+
+        <section class="stop-watch">
+              
+                           <h1> <span class="s-hr">00</span> : <span class="s-min">00</span> : <span class="s-sec">00</span>
+                          </h1>
+                         <div>
+                                <button class="start-btn">start</button>
+                                <button class="stop-btn">stop</button>
+                                <button class="clear-btn">clear</button>
+                         </div>
+          
+        </section>
+    </main>
+    <footer>
+         <p>&copy; Copyright <span class="year"></span>. All rights reserved. Powered by Codeprof Academy.</p>
+    </footer>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
