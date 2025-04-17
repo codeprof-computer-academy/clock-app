@@ -30,6 +30,7 @@ const digital_handle = document.querySelector(".select-digital")
 const analog_handle = document.querySelector(".select-analog")
 const alarm_handle = document.querySelector(".select-alarm")
 const stop_watch_handle = document.querySelector(".select-stop-watch")
+const bell_icon  = document.querySelector(".alarm-bell")
 
  const sound = document.querySelector(".sound")
 
@@ -174,6 +175,8 @@ alarm_container.addEventListener("submit", function(event){
        document.querySelector(".alarm-min").innerHTML = user_min
        document.querySelector(".alarm-display").style.display = "flex"
 
+
+
       
          
         alarm_interval =  setInterval(function(){
@@ -183,14 +186,19 @@ alarm_container.addEventListener("submit", function(event){
         // get the current hr
         let current_hr = current_time.getHours()
 
+        // converting 24hrs to 12hrs
+        current_hr = current_hr % 12
+
         // get the current min
         let current_min = current_time.getMinutes()
 
         if(current_hr === user_hr && current_min === user_min){
                      
+                     bell_icon.classList.add("shake")
                       sound.src = user_sound
                       sound.play()
                      dismiss_btn.style.left = "0"
+                   
         }
          }, 1000)
 
@@ -209,12 +217,13 @@ document.querySelector(".success-close").addEventListener("click", function(){
             analog_container.style.display = "flex"
 }) 
 
-// logic to stop alarm
+// logic to stop/dismiss alarm
 dismiss_btn.addEventListener("click", function(){
         sound.src = ""
         clearInterval(alarm_interval)
         dismiss_btn.style.left = "-150px"
          document.querySelector(".alarm-display").style.display = "none"
+           bell_icon.classList.remove("shake")
 })
 
 // logic to start watch
